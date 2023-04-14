@@ -61,11 +61,11 @@ print(heading) # [163, 166, ... ]
 ```console
 $ gnnssl proj --data /path/to/data.csv --output /path/to/output.csv --no-z, --no-yaw --visualize
 ```
-[projections.gif](https://github.com/rahowa/gnss-localization/blob/dev/images/projections.gif)
+![projections.gif](https://github.com/rahowa/gnss-localization/blob/dev/images/projections.gif)
 
 
 ```console
 $ gnnssl heading --data /path/to/data.csv --output /path/to/output.csv --no-z, --no-yaw --visualize
 ```
 
-[headings.png](https://github.com/rahowa/gnss-localization/blob/dev/images/headings.png)
+![headings.png](https://github.com/rahowa/gnss-localization/blob/dev/images/headings.png)
