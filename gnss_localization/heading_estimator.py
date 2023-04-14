@@ -65,12 +65,12 @@ class GNSSHeadingEstimator:
         if isinstance(vehicle_coordinates, (list, tuple)):
             assert (
                 len(vehicle_coordinates) == 3
-            ), "Input must contain 6 elements: (x, y, z)"
+            ), "Input must contain 3 elements: (x, y, z)"
             vehicle_coordinates = np.array([list(vehicle_coordinates)]).reshape(-1, 6)
         elif isinstance(vehicle_coordinates, np.ndarray):
             assert (
                 vehicle_coordinates.shape[1] == 3
-            ), "Input must contain 6 elements: (x, y, z)"
+            ), "Input must contain 3 elements: (x, y, z)"
             assert len(vehicle_coordinates.shape) == 2, "Input must have shape Nx3"
         else:
             raise ValueError(
