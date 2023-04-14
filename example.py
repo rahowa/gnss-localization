@@ -1,17 +1,3 @@
-# GNSS-localization
-Package for rigid body localoztion using GNSS data
-
-## Installation
-```console
-$ git clone git@github.com:rahowa/gnss-localization.git
-$ cd gnss-localization
-$ pip install .
-```
-
-## Usage
-### Python package
-
-```python
 import numpy as np
 import gnss_localization as gnssl
 
@@ -51,28 +37,3 @@ estimator = gnssl.GNSSHeadingEstimator(
 )
 heading = estimator.predict(np.asanyarray(vehicle_coordinates).reshape(-1, 3))
 print(heading) [43.02760911 55.47551315 50.60675111]
-
-
-```
-### CLI util
-- Calculate GNSS module position projection on moving plane:
-    ```console
-    $ gnnssl proj --data /path/to/data.csv --output /path/to/output.csv --no-z, --no-yaw
-    ```
-- Calculate heading for moving body:
-    ```console
-    $ gnnssl heading --data /path/to/data.csv --output /path/to/output.csv --no-z, --no-yaw
-    ```
-
-## Visualizations
-```console
-$ gnnssl proj --data /path/to/data.csv --output /path/to/output.csv --no-z, --no-yaw --visualize
-```
-![projections.gif](https://github.com/rahowa/gnss-localization/blob/dev/images/projections.gif)
-
-
-```console
-$ gnnssl heading --data /path/to/data.csv --output /path/to/output.csv --no-z, --no-yaw --visualize
-```
-
-![headings.png](https://github.com/rahowa/gnss-localization/blob/dev/images/headings.png)
