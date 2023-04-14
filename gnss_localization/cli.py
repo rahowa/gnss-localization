@@ -100,7 +100,7 @@ def compute_projections(
 
     projections = proj_estimator.predict(data.values)
     projections_df = pd.DataFrame(projections, columns=["x_mm", "y_mm", "z_mm"])
-    projections_df.to_csv(str(output_path or data_path.name), index=False)
+    projections_df.to_csv(str(output_path or f"output-{data_path.name}"), index=False)
 
     if visualize:
         animation = animate_projections(projections)
